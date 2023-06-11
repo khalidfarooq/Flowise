@@ -37,7 +37,7 @@ export const ChatMessage = ({ open, chatflowid, isDialog }) => {
     const [loading, setLoading] = useState(false)
     const [messages, setMessages] = useState([
         {
-            message: 'Hi there! How can I help?',
+            message: 'Hi there! I’m The Metabolic virtual assistant (beta). Ask me anything about Metabolic.',
             type: 'apiMessage'
         }
     ])
@@ -106,7 +106,7 @@ export const ChatMessage = ({ open, chatflowid, isDialog }) => {
         try {
             const params = {
                 question: userInput,
-                history: messages.filter((msg) => msg.message !== 'Hi there! How can I help?')
+                history: messages.filter((msg) => msg.message !== 'Hi there! I’m The Metabolic virtual assistant (beta). Ask me anything about Metabolic.')
             }
             if (isChatFlowAvailableToStream) params.socketIOClientId = socketIOClientId
 
@@ -204,7 +204,7 @@ export const ChatMessage = ({ open, chatflowid, isDialog }) => {
             setLoading(false)
             setMessages([
                 {
-                    message: 'Hi there! How can I help?',
+                    message: 'Hi there! I’m The Metabolic virtual assistant (beta). Ask me anything about Metabolic.',
                     type: 'apiMessage'
                 }
             ])
