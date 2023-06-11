@@ -106,7 +106,7 @@ export const ChatMessage = ({ open, chatflowid, isDialog }) => {
         try {
             const params = {
                 question: userInput,
-                history: messages.filter((msg) => msg.message !== 'Hi there! I’m The Metabolic virtual assistant (beta). Ask me anything about Metabolic.')
+                history: messages.filter((msg) => msg.message !== "Hi there! I’m The Metabolic virtual assistant (beta). Ask me anything about Metabolic.")
             }
             if (isChatFlowAvailableToStream) params.socketIOClientId = socketIOClientId
 
